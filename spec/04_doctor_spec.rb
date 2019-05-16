@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe 'Doctor' do
   describe '#name' do
@@ -18,6 +19,7 @@ describe 'Doctor' do
 
   describe '#new_appointment' do
     it 'given a date and a patient, creates a new appointment' do
+      # binding.pry
       doctor_who = Doctor.new('The Doctor')
       hevydevy = Patient.new('Devin Townsend')
       appointment = doctor_who.new_appointment(hevydevy, 'Friday, January 32nd')
